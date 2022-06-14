@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TesteBack.Enum;
 
 namespace TesteBack
 {
     public class MoedaModel
     {
         public int MoedaId { get; set; }
-        public int MyProperty { get; set; }
+        public MoedaEnum Cotacao { get; set; }
+        public string Moeda { get; set; }
+        public DateTime Data { get; set; }
     }
 }
