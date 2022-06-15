@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\TesteBack\\TesteBack\\TesteBack.csproj": {}
+    "C:\\TesteBack\\TesteBack\\TesteBack.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\TesteBack\\TesteBack\\TesteBack.csproj": {
+    "C:\\TesteBack\\TesteBack\\TesteBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TesteBack\\TesteBack\\TesteBack.csproj",
+        "projectUniqueName": "C:\\TesteBack\\TesteBack\\TesteBack.csproj",
         "projectName": "TesteBack",
-        "projectPath": "C:\\Projetos\\TesteBack\\TesteBack\\TesteBack.csproj",
-        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TesteBack\\TesteBack\\obj\\",
+        "projectPath": "C:\\TesteBack\\TesteBack\\TesteBack.csproj",
+        "packagesPath": "C:\\Users\\41404141898\\.nuget\\packages\\",
+        "outputPath": "C:\\TesteBack\\TesteBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\41404141898\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[5.0.6, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -67,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

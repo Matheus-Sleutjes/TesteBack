@@ -5,7 +5,7 @@ namespace TesteBack.Service.Interface
 {
     public interface IMoedaService
     {
-        bool AdditemFila(PesquisaModel pesquisa);
+        bool AdditemFila(PesquisaModelView pesquisa);
         List<MoedaModel> GetItemFile();
     }
 }

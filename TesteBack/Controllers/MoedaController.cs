@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TesteBack.Model;
+using TesteBack.Model.Validation;
 using TesteBack.Service.Interface;
 
 namespace TesteBack.Controllers
@@ -23,20 +24,20 @@ namespace TesteBack.Controllers
         public IActionResult GetItemFila()
         {
             var lista = _moedaService.GetItemFile();
-            
-            if(lista == null)
-                return NotFound();  
+
+            Validacoes.ValidarSeNulo(lista, "Não foi encontrado nenhum item");  
 
             return Ok(lista);
         }
 
         [HttpPost("AddItemFila")]
-        public IActionResult AddItemFila([FromBody] PesquisaModel pesquisa)
+        public IActionResult AddItemFila([FromBody] PesquisaModelView pesquisa)
         {
+            Validacoes.ValidarSeNulo(pesquisa, "Preencha todos os parametros");
+
             var acao = _moedaService.AdditemFila(pesquisa);
 
-            if (!acao)
-                return NotFound();
+            Validacoes.ValidarSeFalso(acao, "Verifique se os parametros estão preenchidos corretamente");
 
             return Ok();
         }
