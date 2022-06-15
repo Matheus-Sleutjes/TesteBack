@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TesteBack.Model;
+using TesteBack.Service.Interface;
 
 namespace TesteBack.Controllers
 {
@@ -11,21 +13,32 @@ namespace TesteBack.Controllers
     [Route("[controller]")]
     public class MoedaController : ControllerBase
     {
-
-        public MoedaController()
+        readonly IMoedaService _moedaService;
+        public MoedaController(IMoedaService moedaService)
         {
+            _moedaService = moedaService;
         }
 
         [HttpGet("GetItemFila")]
-        public void GetItemFila()
+        public IActionResult GetItemFila()
         {
+            var lista = _moedaService.GetItemFile();
             
+            if(lista == null)
+                return NotFound();  
+
+            return Ok(lista);
         }
 
         [HttpPost("AddItemFila")]
-        public void AddItemFila()
+        public IActionResult AddItemFila([FromBody] PesquisaModel pesquisa)
         {
+            var acao = _moedaService.AdditemFila(pesquisa);
 
+            if (!acao)
+                return NotFound();
+
+            return Ok();
         }
     }
 }
