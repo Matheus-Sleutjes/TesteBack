@@ -1,7 +1,7 @@
 # TesteBack
 Esse é uma RestAPI ASP.NET5 com dois metodos expostos.
 
-public void AddItemLista(List<PesquisaModelView>){
+AddItemLista {
   É passado como parametro uma lista de pesquisa, que é armazenado no arquivo bd.json
   
   PesquisaModelView{
@@ -10,16 +10,16 @@ public void AddItemLista(List<PesquisaModelView>){
     data_fim: string
   }
 
-  !IMPORTANTE! : se data_inicio for maior que data_fim o item não é colocado na lista por questão de padronizaçãoe e validação.
+  !IMPORTANTE! : se data_inicio for maior que data_fim o item não é colocado na lista por questão de padronizaçãoe e validação. 
 }
   
-public PesquisaModelView GetItemLista(){
+GetItemLista {
   É um metodo que retorna e exclui lógicamente o ultimo item adicionado na lista
   
   PesquisaModelView{
     moeda: string,
     data_inicio: string,
-    data_fim: string
+    data_fim: string 
   }
 }
   
