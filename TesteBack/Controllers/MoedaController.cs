@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TesteBack.Model;
-using TesteBack.Model.Validation;
 using TesteBack.Service.Interface;
 
 namespace TesteBack.Controllers
@@ -23,21 +18,21 @@ namespace TesteBack.Controllers
         [HttpGet("GetItemFila")]
         public IActionResult GetItemFila()
         {
-            var lista = _moedaService.GetItemFile();
+            var item = _moedaService.GetItemFila();
 
-            Validacoes.ValidarSeNulo(lista, "Não foi encontrado nenhum item");  
+            if(item == null)
+                return NotFound();
 
-            return Ok(lista);
+            return Ok(item);
         }
 
         [HttpPost("AddItemFila")]
-        public IActionResult AddItemFila([FromBody] PesquisaModelView pesquisa)
+        public IActionResult AddItemFila([FromBody] List<PesquisaModelView> pesquisa)
         {
-            Validacoes.ValidarSeNulo(pesquisa, "Preencha todos os parametros");
-
             var acao = _moedaService.AdditemFila(pesquisa);
 
-            Validacoes.ValidarSeFalso(acao, "Verifique se os parametros estão preenchidos corretamente");
+            if(!acao)
+                return BadRequest();
 
             return Ok();
         }

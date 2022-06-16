@@ -1,0 +1,15 @@
+{
+  "moeda": "USD",
+  "data_inicio": "2010-10-20",
+  "data_fim": "2010-10-30"
+}
+{
+  "moeda": "BRL",
+  "data_inicio": "2011-06-06",
+  "data_fim": "2011-07-06"
+}
+{
+  "moeda": "JYP",
+  "data_inicio": "2012-02-01",
+  "data_fim": "2012-02-25"
+}

@@ -14,17 +14,23 @@ namespace TesteBack.Service
             _moedaRepository = moedaRepository;
         }
 
-        public bool AdditemFila(PesquisaModelView pesquisa)
+        public bool AdditemFila(List<PesquisaModelView> pesquisa)
         {
-            var pesquisaFormatada = this.TransformaStringDate(pesquisa);
-            var retorno = _moedaRepository.AddItemLista(pesquisaFormatada);
+            var lista = new List<PesquisaModel>();
+            foreach (var item in pesquisa)
+            {
+                var pesquisaFormatada = this.TransformaStringDate(item);
 
-            return retorno;
+                if(pesquisaFormatada.DataInicio <= pesquisaFormatada.DataFim)
+                    lista.Add(pesquisaFormatada);
+            }
+
+            return _moedaRepository.AddItemLista(lista);
         }
 
-        public List<MoedaModel> GetItemFile()
+        public PesquisaModelView GetItemFila()
         {
-            return new List<MoedaModel>();
+            return this.TransformaDateString(_moedaRepository.GetItemFila());
         }
 
         private PesquisaModel TransformaStringDate(PesquisaModelView pesquisa)
@@ -33,6 +39,20 @@ namespace TesteBack.Service
             var dataFim = DateTime.ParseExact(pesquisa.data_fim, "yyyy-MM-dd", null);
 
             return new PesquisaModel(pesquisa.moeda, dataInicio, dataFim );
+        }
+
+        private PesquisaModelView TransformaDateString(PesquisaModel pesquisa)
+        {
+            var dataInicio = pesquisa.DataInicio.ToString("yyyy-MM-dd");
+            var dataFim = pesquisa.DataFim.ToString("yyyy-MM-dd");
+
+            var retorno = new PesquisaModelView()
+            {
+                moeda = pesquisa.Moeda,
+                data_inicio = dataInicio,
+                data_fim = dataFim,
+            };
+            return retorno;
         }
     }
 }

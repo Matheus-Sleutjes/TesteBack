@@ -1,55 +1,71 @@
-﻿using TesteBack.Model;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using TesteBack.Model;
 using TesteBack.Repository.Interface;
 using TesteBack.Service.Interface;
-using System.Text.Json;
-using System.IO;
-using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace TesteBack.Repository
 {
     public class MoedaRepository : IMoedaRepository
     {
-        private readonly string filePath = @"C:\Users\Public\bd.json";
+        private readonly string filePath = "db.json";
         private readonly IConverter _converter;
         public MoedaRepository(IConverter converter)
         {
             _converter = converter;
         }
 
-        public bool AddItemLista(PesquisaModel pesquisa)
+        public bool AddItemLista(List<PesquisaModel> pesquisa)
         {
-            var json = _converter.ConverteObjectParaJSon(pesquisa);
-            var retorno = this.SalvarItem(json);
+            var lista = new List<PesquisaModel>(GetDB());
 
-            return retorno;
+            foreach(var item in pesquisa)
+                lista.Add(item);
+
+            return this.SaveBD(lista);
         }
 
-        private bool SalvarItem(string json)
+        public PesquisaModel GetItemFila()
+        {
+            var lista = new List<PesquisaModel>(GetDB());
+
+            return DeleteDB(lista);
+        }
+
+        private bool SaveBD(List<PesquisaModel> lista)
         {
             try
             {
-                //using (var sw = new StreamWriter(this.filePath))
-                //{
-                //    sw.Write(json);
-                //}
-
-                using (var fs = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite))
-                {
-                    var writer = new JsonTextWriter();
-                }
-                    return true;
+                var json = _converter.ConverteObjectParaJSon(lista);
+                File.WriteAllText(this.filePath, json);
+                return true;
             }
             catch (System.Exception)
             {
-                throw;
+                return false;
             }
         }
 
-        private PesquisaModel GetLista(string json)
+        private List<PesquisaModel> GetDB()
         {
-            dynamic pesquisaModel = JsonConvert.DeserializeObject(File.ReadAllText(json));
-            return pesquisaModel;   
+            return _converter.ConverteJSonParaObject(this.filePath);
+        }
+
+        private PesquisaModel DeleteDB(List<PesquisaModel> lista)
+        {
+            var obj = lista.Where(t => !t.Excluido).LastOrDefault();
+
+            if(obj == null)
+                return null;
+
+            lista.Remove(obj);
+            obj.Excluido = true;
+            lista.Add(obj);
+
+            this.SaveBD(lista);
+
+            return obj;
         }
     }
 }

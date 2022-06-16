@@ -1,5 +1,8 @@
-﻿using System.Text.Json;
+﻿using System.Collections.Generic;
+using TesteBack.Model;
 using TesteBack.Service.Interface;
+using System.Text.Json;
+using System.IO;
 
 namespace TesteBack.Service
 {
@@ -10,18 +13,24 @@ namespace TesteBack.Service
             try
             {
                 var options = new JsonSerializerOptions { WriteIndented = true };
-                return JsonSerializer.Serialize(obj, options);
+                var retorno = JsonSerializer.Serialize(obj, options);
+                return retorno;
             }
             catch
             {
                 throw;
             }
         }
-        public T ConverteJSonParaObject<T>(string jsonString)
+        public List<PesquisaModel> ConverteJSonParaObject(string filePath)
         {
             try
             {
-                return JsonSerializer.Deserialize<T>(jsonString);
+                string jsonString = File.ReadAllText(filePath);
+
+                if(jsonString == "")
+                    return new List<PesquisaModel>();
+
+                return JsonSerializer.Deserialize<List<PesquisaModel>>(jsonString);
             }
             catch
             {

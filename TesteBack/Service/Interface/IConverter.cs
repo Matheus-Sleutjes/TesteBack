@@ -1,8 +1,11 @@
-﻿namespace TesteBack.Service.Interface
+﻿using System.Collections.Generic;
+using TesteBack.Model;
+
+namespace TesteBack.Service.Interface
 {
     public interface IConverter
     {
         string ConverteObjectParaJSon<T>(T obj);
-        T ConverteJSonParaObject<T>(string jsonString);
+        List<PesquisaModel> ConverteJSonParaObject(string filePath);
     }
 }
