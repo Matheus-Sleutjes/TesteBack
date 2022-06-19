@@ -43,6 +43,9 @@ namespace TesteBack.Service
 
         private PesquisaModelView TransformaDateString(PesquisaModel pesquisa)
         {
+            if(pesquisa == null)
+                return null;    
+
             var dataInicio = pesquisa.DataInicio.ToString("yyyy-MM-dd");
             var dataFim = pesquisa.DataFim.ToString("yyyy-MM-dd");
 
