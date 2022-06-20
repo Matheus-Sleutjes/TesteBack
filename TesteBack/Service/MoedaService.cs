@@ -28,9 +28,9 @@ namespace TesteBack.Service
             return _moedaRepository.AddItemLista(lista);
         }
 
-        public PesquisaModelView GetItemFila()
+        public PesquisaModel GetItemFila()
         {
-            return this.TransformaDateString(_moedaRepository.GetItemFila());
+            return _moedaRepository.GetItemFila();
         }
 
         private PesquisaModel TransformaStringDate(PesquisaModelView pesquisa)
@@ -41,21 +41,21 @@ namespace TesteBack.Service
             return new PesquisaModel(pesquisa.moeda, dataInicio, dataFim );
         }
 
-        private PesquisaModelView TransformaDateString(PesquisaModel pesquisa)
-        {
-            if(pesquisa == null)
-                return null;    
+        //private PesquisaModelView TransformaDateString(PesquisaModel pesquisa)
+        //{
+        //    if(pesquisa == null)
+        //        return null;    
 
-            var dataInicio = pesquisa.DataInicio.ToString("yyyy-MM-dd");
-            var dataFim = pesquisa.DataFim.ToString("yyyy-MM-dd");
+        //    var dataInicio = pesquisa.DataInicio.ToString("yyyy-MM-dd");
+        //    var dataFim = pesquisa.DataFim.ToString("yyyy-MM-dd");
 
-            var retorno = new PesquisaModelView()
-            {
-                moeda = pesquisa.Moeda,
-                data_inicio = dataInicio,
-                data_fim = dataFim,
-            };
-            return retorno;
-        }
+        //    var retorno = new PesquisaModelView()
+        //    {
+        //        moeda = pesquisa.Moeda,
+        //        data_inicio = dataInicio,
+        //        data_fim = dataFim,
+        //    };
+        //    return retorno;
+        //}
     }
 }
