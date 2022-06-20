@@ -5,19 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\Validation\**" />
-    <Content Remove="Model\Validation\**" />
-    <EmbeddedResource Remove="Model\Validation\**" />
-    <None Remove="Model\Validation\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Repository\db.json" />
-    <Content Remove="Repository\fila.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.6" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>

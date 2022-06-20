@@ -1,7 +1,5 @@
 C:\TesteBack\TesteBack\bin\Debug\net5.0\appsettings.Development.json
 C:\TesteBack\TesteBack\bin\Debug\net5.0\appsettings.json
-C:\TesteBack\TesteBack\bin\Debug\net5.0\Repository\db.json
-C:\TesteBack\TesteBack\bin\Debug\net5.0\Repository\fila.json
 C:\TesteBack\TesteBack\bin\Debug\net5.0\TesteBack.exe
 C:\TesteBack\TesteBack\bin\Debug\net5.0\TesteBack.deps.json
 C:\TesteBack\TesteBack\bin\Debug\net5.0\TesteBack.runtimeconfig.json
@@ -30,7 +28,6 @@ C:\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.pdb
 C:\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.genruntimeconfig.cache
 C:\TesteBack\TesteBack\obj\Debug\net5.0\ref\TesteBack.dll
 C:\TesteBack\TesteBack\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\TesteBack\TesteBack\bin\Debug\net5.0\bd.json
 C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.csproj.AssemblyReference.cache
 C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.AssemblyInfoInputs.cache
@@ -62,3 +59,6 @@ C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.RazorTargetAssemblyIn
 C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.csproj.CopyComplete
 C:\Projetos\TesteBack\TesteBack\obj\Debug\net5.0\TesteBack.genruntimeconfig.cache
 C:\Projetos\TesteBack\TesteBack\bin\Debug\net5.0\db.json
+C:\TesteBack\TesteBack\bin\Debug\net5.0\db.json
+C:\TesteBack\TesteBack\bin\Debug\net5.0\Repository\db.json
+C:\TesteBack\TesteBack\bin\Debug\net5.0\Repository\fila.json

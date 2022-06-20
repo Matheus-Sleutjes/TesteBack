@@ -1,4 +1,5 @@
 ﻿using System;
+using TesteBack.Enum;
 
 namespace TesteBack.Model
 {
@@ -6,7 +7,6 @@ namespace TesteBack.Model
     {
         public PesquisaModel(string moeda, DateTime datainicio, DateTime dataFim)
         {
-            Id = SetNewId();
             Moeda = moeda;
             DataInicio = datainicio;
             DataFim = dataFim;
@@ -14,17 +14,10 @@ namespace TesteBack.Model
             DataPesquisa = DateTime.Now;
         }
 
-        public Guid Id { get; set; }
         public string Moeda { get; set; }
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
         public bool Excluido { get; set; }
         public DateTime DataPesquisa { get; set; } 
-
-        private Guid SetNewId()
-        {
-            return Guid.NewGuid();
-        }
-
     }
 }

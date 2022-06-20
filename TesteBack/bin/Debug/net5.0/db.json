@@ -1,10 +1,86 @@
 [
   {
-    "Id": "54442178-65db-4411-a98a-17281f5022db",
-    "Moeda": "brl",
-    "DataInicio": "2010-06-06T00:00:00",
-    "DataFim": "2010-06-07T00:00:00",
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
     "Excluido": true,
-    "DataPesquisa": "2022-06-19T11:23:33.4269393-04:00"
+    "DataPesquisa": "2022-06-20T14:37:52.2191512-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:37:52.2189216-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:42:12.5623541-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:44:54.3066625-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:44:54.3066581-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:42:12.5623509-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:50:15.1752096-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:50:15.1752015-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:58:47.5889619-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T14:58:47.5889511-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-08-06T00:00:00",
+    "DataFim": "2010-09-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T15:02:04.1428192-04:00"
+  },
+  {
+    "Moeda": "USD",
+    "DataInicio": "2010-06-06T00:00:00",
+    "DataFim": "2010-07-06T00:00:00",
+    "Excluido": true,
+    "DataPesquisa": "2022-06-20T15:02:04.1428168-04:00"
   }
 ]

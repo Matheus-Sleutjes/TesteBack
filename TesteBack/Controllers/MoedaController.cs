@@ -20,7 +20,7 @@ namespace TesteBack.Controllers
         {
             var item = _moedaService.GetItemFila();
 
-            if(item == null)
+            if (item == null)
                 return NotFound();
 
             return Ok(item);
